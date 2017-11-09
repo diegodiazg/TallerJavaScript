@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tallar JavaScript</title>
+	<script type="text/javascript" src="js/reloj.js" ></script>
+</head>
+<body>
+<div id="content"></div>
+<div id="hora"></div>
+
+</body>
+<script type="text/javascript">
+	var arreglo = ["universidad", "apple", "manzana"];
+	function llenar(){
+		var contenido = document.getElementById("content");
+		contenido.innerHTML= arreglo;
+		alert("si");
+		//document.write("diego")
+
+	}
+
+	window.addEventListener('load', function() {
+	  console.log('window - load - bubble'); // 4th
+	  llenar();
+	  var hora = actual();
+	  document.getElementById("hora").innerHTML=hora;
+	});
+
+</script>
+</html>
