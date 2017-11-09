@@ -14,17 +14,15 @@
 	function llenar(){
 		var contenido = document.getElementById("content");
 		contenido.innerHTML= arreglo[0];
-		//alert("si");
-		//document.write("diego")
-
 	} 
 
-	window.addEventListener('load', function() {
-	llenar();
-	window.setTimeout(actual(), 1000);
+	document.addEventListener('DOMContentLoaded', function () {
+    	console.log( " Estoy listo para modificar!" );
+    	llenar();
+	
 
-
-	});
+	    setTimeout("show()",2000)
+		});
 
 </script>
 </html>

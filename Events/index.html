@@ -5,26 +5,31 @@
 	<script type="text/javascript" src="js/reloj.js" ></script>
 </head>
 <body>
+
+	<input type="button" value="Pinchame y verás" onclick="set_background();" onmouseover="change_font_size()" onmouseout="change_font_size()" />
+	<p>Diego</p>
+
 <div id="content"></div>
-<div id="hora"></div>
 
 </body>
 <script type="text/javascript">
-	var arreglo = ["universidad", "apple", "manzana"];
-	function llenar(){
-		var contenido = document.getElementById("content");
-		contenido.innerHTML= arreglo;
-		alert("si");
-		//document.write("diego")
+   	function set_background(){
+   		color = document.body.style.backgroundColor;
+   		if(color != "red"){
+   			document.body.style.background = "red";
+   		}else {
+   			document.body.style.background = '';
+   		}
+   }
 
-	}
+   function change_font_size(){
+   		if (document.body.style.fontSize != "36px"){
+   			document.body.style.fontSize = "36px";
+   		}else{
+   			document.body.style.fontSize = "initial";
+   		}
 
-	window.addEventListener('load', function() {
-	  console.log('window - load - bubble'); // 4th
-	  llenar();
-	  var hora = actual();
-	  document.getElementById("hora").innerHTML=hora;
-	});
+   }
 
 </script>
 </html>
